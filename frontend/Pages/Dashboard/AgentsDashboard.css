@@ -1,0 +1,30 @@
+.home-section{
+    padding-top: 0.5%;
+    padding-left: 5%;
+}
+.stat-card {
+    background-color: #1e1e2d; /* Dark theme as per your preference */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.stat-card .stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.stat-card .stat-label {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-top: 5px;
+}

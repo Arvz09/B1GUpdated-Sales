@@ -1,0 +1,88 @@
+<section class="sidebar">
+  <div class="logo-details">
+    <div class="logo_name">B1G Admins</div>
+    <i class="bx bx-menu" id="btn"></i>
+  </div>
+  <ul class="nav-list">
+    <li>
+      <a
+        href="/Pages/Dashboard/AdminDashboard.html"
+        class="nav-link"
+        id="dashboard-link"
+      >
+        <i class="bx bx-grid-alt"></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+      <span class="tooltip">Dashboard</span>
+    </li>
+    <li>
+      <a href="/Pages/Agents/AdminAgent.html" class="nav-link" id="agents-link">
+        <i class="bx bx-user"></i>
+        <span class="links_name">Agents</span>
+      </a>
+      <span class="tooltip">Agents</span>
+    </li>
+    <li>
+      <a href="/Pages/Order/AdminOrder.html" class="nav-link" id="order-link">
+        <i class="bx bx-cart-alt"></i>
+        <span class="links_name">Order</span>
+      </a>
+      <span class="tooltip">Order</span>
+    </li>
+    <li>
+      <a
+        href="/Pages/Client/AdminClient.html"
+        class="nav-link"
+        id="clients-link"
+      >
+        <i class="bx bx-heart"></i>
+        <span class="links_name">Clients</span>
+      </a>
+      <span class="tooltip">Clients</span>
+    </li>
+    <li>
+      <a
+        href="/Pages/Settings/AdminSettings.html"
+        class="nav-link"
+        id="settings-link"
+      >
+        <i class="bx bx-cog"></i>
+        <span class="links_name">Settings</span>
+      </a>
+      <span class="tooltip">Settings</span>
+    </li>
+
+    <li class="profile">
+      <div class="profile-details">
+        <img src="./images/profile.png" alt="profileImg" />
+        <div class="name_job">
+          <div class="name">ID role</div>
+        </div>
+      </div>
+      <a href="#" id="log_out" class="logout-btn">
+        <i class="bx bx-log-out"></i>
+        <span class="links_name"></span>
+      </a>
+      <span class="tooltip">Logout</span>
+      <!-- Tooltip will now show on hover -->
+    </li>
+  </ul>
+</section>
+
+<div class="logout-popup-overlay" id="logoutPopup">
+  <div class="logout-popup">
+    <div class="logout-popup-header">
+      <h3>Confirm Logout</h3>
+      <button class="close-popup" id="closePopup">&times;</button>
+    </div>
+    <div class="logout-popup-content">
+      <p>Are you sure you want to log out?</p>
+    </div>
+    <div class="logout-popup-actions">
+      <button class="cancel-btn" id="cancelLogout">Cancel</button>
+      <button class="confirm-btn" id="confirmLogout">Logout</button>
+    </div>
+  </div>
+</div>
+
+<script src="/sidebar.js"></script>

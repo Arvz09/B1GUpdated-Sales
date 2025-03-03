@@ -1,0 +1,62 @@
+<section class="sidebar">
+    <div class="logo-details">
+      <div class="logo_name">B1G Agents</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a
+          href="/Pages/Dashboard/AgentsDashboard.html"
+          class="nav-link"
+          id="dashboard-link"
+        >
+          <i class="bx bx-grid-alt"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      
+      <li>
+        <a href="/Pages/Order/AgentOrder.html" class="nav-link" id="order-link">
+          <i class="bx bx-cart-alt"></i>
+          <span class="links_name">Order Form</span>
+        </a>
+        <span class="tooltip">Order Form</span>
+      </li>
+      
+  
+      <li class="profile">
+        <div class="profile-details">
+          <img src="./images/profile.png" alt="profileImg" />
+          <div class="name_job">
+            <div class="name">ID role</div>
+          </div>
+        </div>
+        <a href="#" id="log_out" class="logout-btn">
+          <i class="bx bx-log-out"></i>
+          <span class="links_name"></span>
+        </a>
+        <span class="tooltip">Logout</span>
+        <!-- Tooltip will now show on hover -->
+      </li>
+    </ul>
+  </section>
+  
+  <div class="logout-popup-overlay" id="logoutPopup">
+    <div class="logout-popup">
+      <div class="logout-popup-header">
+        <h3>Confirm Logout</h3>
+        <button class="close-popup" id="closePopup">&times;</button>
+      </div>
+      <div class="logout-popup-content">
+        <p>Are you sure you want to log out?</p>
+      </div>
+      <div class="logout-popup-actions">
+        <button class="cancel-btn" id="cancelLogout">Cancel</button>
+        <button class="confirm-btn" id="confirmLogout">Logout</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="/agentsidebar.js"></script>
+  

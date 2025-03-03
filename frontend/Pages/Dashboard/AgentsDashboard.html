@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agents Dashboard</title>
+    <link rel="stylesheet" href="/Components/agentsidebar.css" />
+    <link rel="stylesheet" href="/Pages/Dashboard/AgentsDashboard.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section id="sidebar-container"></section>
+    <section class="home-section">
+      <div class="text">Agents Dashboard</div>
+      <div>
+        <div class="stat-card">
+          <h3>Tiloveyoyu</h3>
+          <p class="stat-value">$125,000</p>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    fetch("/Components/agentsidebar.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("sidebar-container").innerHTML = data;
+        const script = document.createElement("script");
+        script.src = "/Components/agentsidebar.js"; // Load sidebar.js after sidebar.html
+        script.defer = true;
+        document.body.appendChild(script);
+      });
+  </script>
+  <script src="/Components/admin.js" defer></script>
+</html>
