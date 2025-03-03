@@ -337,7 +337,7 @@
 }
 
 .close-popup:hover {
-  color: #f8d689;
+  color: #940c00;
 }
 
 /* Popup content */
@@ -387,4 +387,18 @@
 
 .confirm-btn:hover {
   background-color: #1d1b31;
+}
+
+.sidebar li a.active {
+  background: #ffffff; /* Highlight color */
+  color: #11101d; /* Text color */
+  font-weight: bold;
+}
+
+.sidebar li a.active i {
+  color: #000000; /* Icon color change */
+}
+.sidebar li a.active .links_name,
+.sidebar li a.active i {
+  color: #11101d !important;
 }

@@ -56,6 +56,9 @@ const pages = {
   "/Pages/Settings/AdminSettings.html": "settings-link",
 };
 
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.classList.remove("active");
+});
 // Set active state
 if (pages[currentPage]) {
   let activeLink = document.getElementById(pages[currentPage]);
@@ -64,6 +67,7 @@ if (pages[currentPage]) {
     activeLink.style.pointerEvents = "none"; // Disable clicking
   }
 }
+
 
 // Handle logout with custom popup
 function setupLogout() {

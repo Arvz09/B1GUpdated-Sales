@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show/hide signup text for agents
         signupText.style.display = userType === 'user' ? 'block' : 'none';
     };
-
+    
     // User type selection
     userBtn.addEventListener('click', () => {
         if (userType !== 'agent') {

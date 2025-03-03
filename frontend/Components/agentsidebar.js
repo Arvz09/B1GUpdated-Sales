@@ -44,24 +44,30 @@ if (homeSection) {
   adjustHomeSection();
 }
 
-// Get the current page URL
-const currentPage = window.location.pathname;
+// Set active state for sidebar navigation
+function setActiveNavLink() {
+  // Get the current page URL
+  const currentPage = window.location.pathname;
 
-// Mapping of page URLs to link IDs
-const pages = {
-  "/Pages/Dashboard/AdminDashboard.html": "dashboard-link",
-  "/Pages/Agents/AdminAgent.html": "agents-link",
-  "/Pages/Order/AdminOrder.html": "order-link",
-  "/Pages/Client/AdminClient.html": "clients-link",
-  "/Pages/Settings/AdminSettings.html": "settings-link",
-};
+  // Mapping of page URLs to link IDs
+  const pages = {
+    "/Pages/Dashboard/AgentsDashboard.html": "dashboard-link",
+    "/Pages/Order/AgentOrder.html": "order-link",
+  
+    // Add other pages as needed
+  };
 
-// Set active state
-if (pages[currentPage]) {
-  let activeLink = document.getElementById(pages[currentPage]);
-  if (activeLink) {
-    activeLink.classList.add("active");
-    activeLink.style.pointerEvents = "none"; // Disable clicking
+  // First remove active class from all nav links
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    link.classList.remove("active");
+  });
+
+  // Set active state based on current page
+  if (pages[currentPage]) {
+    const activeLink = document.getElementById(pages[currentPage]);
+    if (activeLink) {
+      activeLink.classList.add("active");
+    }
   }
 }
 
@@ -122,10 +128,14 @@ function setupLogout() {
   }
 }
 
-// If DOM is already loaded, setup logout immediately
+// Run both setup functions when DOM is loaded
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", setupLogout);
+  document.addEventListener("DOMContentLoaded", function() {
+    setActiveNavLink();
+    setupLogout();
+  });
 } else {
   // DOM is already loaded
+  setActiveNavLink();
   setupLogout();
 }
